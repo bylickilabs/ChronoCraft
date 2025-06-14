@@ -1,10 +1,7 @@
 > 🕰️ ChronoCraft – Interaktiver Zeitlinien-Editor
 
-![HTML5](https://img.shields.io/badge/HTML5-%23E34F26?style=for-the-badge&logo=html5&logoColor=white) | ![CSS3](https://img.shields.io/badge/CSS3-%231572B6?style=for-the-badge&logo=css3&logoColor=white) | ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) | ![VanillaJS](https://img.shields.io/badge/Vanilla_JS-pure-yellow?style=for-the-badge&logo=javascript) |
-|---|---|---|---|
-
-| ![Export](https://img.shields.io/badge/Export-PDF%20%7C%20PNG%20%7C%20JSON-00fff7?style=for-the-badge) | ![Responsive](https://img.shields.io/badge/Responsive-Yes-green?style=for-the-badge) | ![License](https://img.shields.io/badge/License-MIT-informational?style=for-the-badge) |
-|---|---|---|
+![HTML5](https://img.shields.io/badge/HTML5-%23E34F26?style=for-the-badge&logo=html5&logoColor=white) | ![CSS3](https://img.shields.io/badge/CSS3-%231572B6?style=for-the-badge&logo=css3&logoColor=white) | ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) | ![VanillaJS](https://img.shields.io/badge/Vanilla_JS-pure-yellow?style=for-the-badge&logo=javascript) | ![Export](https://img.shields.io/badge/Export-PDF%20%7C%20PNG%20%7C%20JSON-00fff7?style=for-the-badge) | ![Responsive](https://img.shields.io/badge/Responsive-Yes-green?style=for-the-badge) | ![License](https://img.shields.io/badge/License-MIT-informational?style=for-the-badge) |
+|---|---|---|---|---|---|---|
 
 <br>
 
