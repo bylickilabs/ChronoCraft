@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChronoCraft – Zeitlinien-Generator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+</head>
+<body>
+  <main>
+    <div class="header">
+      <h1>🕰️ ChronoCraft – Zeitlinien-Generator</h1>
+      <div class="zoom-controls">
+      <label>Filter: <select id="filterColor" onchange="filterByColor()">
+        <option value="">Alle</option>
+        <option value="red">Rot</option>
+        <option value="green">Grün</option>
+        <option value="blue">Blau</option>
+      </select></label>
+        <button onclick="setZoom(1)">🔍 100%</button>
+        <button onclick="setZoom(1.25)">🔍 125%</button>
+        <button onclick="setZoom(1.5)">🔍 150%</button>
+      </div>
+      <div class="button-group">
+    <button onclick="addEvent()">➕ Neues Ereignis</button>
+          <button onclick="exportTimeline()">📤 Exportieren (JSON)</button>
+          <button onclick="exportTimelinePDF()">🖨️ Exportieren (PDF)</button>
+          <button onclick="exportTimelinePNG()">🖼️ Exportieren (PNG)</button>
+    </div>
+    </div>
+    
+<div id="timeline-year-controls">
+  <input type="number" id="newYearInput" min="2000" max="2100" placeholder="Neues Jahr eingeben" />
+  <button onclick="addTimelineYear()">➕ Jahr hinzufügen</button>
+</div>
+<div id="timeline-labels"></div>
+
+  <div class="timeline" id="timeline"></div>
+  </main>
+  <script src="js/timeline.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/export.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1e1e2f;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.header {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.timeline {
+  width: 100%;
+  max-width: 960px;
+  background: #2e2e3e;
+  border: 2px solid #00fff7;
+  border-radius: 8px;
+  min-height: 400px;
+  position: relative;
+  padding: 1rem;
+}
+.event {
+  position: absolute;
+  background: #00fff7;
+  color: #1e1e2f;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: move;
+}
+button {
+  background: #00fff7;
+  border: none;
+  color: #1e1e2f;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.zoom-controls {
+  margin-bottom: 1rem;
+}
+.zoom-controls button {
+  margin-right: 0.5rem;
+}
+
+.event[data-color="red"] { background: #ff4d4d; }
+.event[data-color="green"] { background: #4dff88; }
+.event[data-color="blue"] { background: #4da6ff; }
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+  position: relative;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px,
+    transparent 100px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-auto-rows: 80px;
+  }
+
+  .event {
+    font-size: 12px;
+    padding: 0.25rem;
+  }
+}
+
+.header {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.header .zoom-controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.header button {
+  background: #00fff7;
+  border: none;
+  color: #1e1e2f;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.header button:hover {
+  transform: scale(1.05);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1e1e2f;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #1e1e2f;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #00fff7;
+}
+
+#timeline-labels {
+  display: flex;
+  width: 100%;
+  max-width: 960px;
+  margin-bottom: 0.25rem;
+  gap: 10px;
+  padding-left: 1rem;
+}
+#timeline-labels span {
+  flex: 1;
+  text-align: center;
+  color: #00fff7;
+  font-weight: bold;
+}
+
+.header .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.header .button-group button,
+.header .zoom-controls button {
+  background: #00fff7;
+  border: none;
+  color: #1e1e2f;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.header .button-group button:hover,
+.header .zoom-controls button:hover {
+  transform: scale(1.05);
+}
+
+#timeline-year-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  max-width: 960px;
+  width: 100%;
+}
+
+#timeline-year-controls input {
+  flex: 1;
+  padding: 6px;
+  background: #1e1e2f;
+  border: 1px solid #00fff7;
+  color: #00fff7;
+  border-radius: 4px;
+}
